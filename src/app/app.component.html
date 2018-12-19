@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<ul>
+  <li *ngFor="let item of todoList">
+    {{item.title}}
+  </li>
+</ul>
+<ul>
+  <li *ngFor="let item of todoList">
+    <todo-item (submit)="addItem($event)" ></todo-item>
+  </li>
+</ul>
+<input (onclick)="agregaItem()">
+<input (change)="cambiarTitulo($event)">
+{{title}}
+<button (click)="agregaItem()"> Agregar Elemento</button>
+
